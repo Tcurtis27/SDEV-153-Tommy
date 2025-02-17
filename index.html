@@ -5,22 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacific Trails Resort</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            main {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            section {
+                width: 45%;
+            }
+        }
+        @media (min-width: 1024px) {
+            section {
+                width: 30%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Pacific Trails Resort</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#yurts">Yurts</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#reservations">Reservations</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Welcome to Pacific Trails Resort</h2>
-            <p>Enjoy your stay at our beautiful resort!</p>
+        <section id="home">
+            <h2>Experience Tranquility</h2>
+            <p>Escape to Pacific Trails Resort and enjoy the beauty of nature.</p>
+        </section>
+        <section id="yurts">
+            <h2>Our Yurts</h2>
+            <p>Comfortable and luxurious yurts with ocean views.</p>
+        </section>
+        <section id="activities">
+            <h2>Activities</h2>
+            <p>Explore hiking trails, enjoy campfires, and relax by the coast.</p>
+        </section>
+        <section id="reservations">
+            <h2>Make a Reservation</h2>
+            <p>Contact us to book your stay today!</p>
         </section>
     </main>
     <footer>
