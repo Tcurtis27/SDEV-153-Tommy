@@ -1,44 +1,57 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background-color: #FFFFFF;
+    color: #666666;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5; /* Improved readability */
 }
-
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #002171;
+    color: #FFFFFF;
+}
+h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 2em; /* Larger heading */
+    font-family: Georgia, "Times New Roman", serif;
+}
+h2 {
+    color: #0033A0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+nav {
+    background-color: #90C7E3;
+    padding: 10px;
     text-align: center;
 }
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: white;
+nav a {
+    color: #0033A0;
     text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
 }
-
+nav a:hover {
+    color: #FF6600;
+}
 main {
     padding: 20px;
-    margin: 20px;
-    background-color: white;
+    font-size: 1.1em; /* Slightly larger text */
 }
-
+p {
+    margin: 15px 0; /* Spacing between paragraphs */
+}
 footer {
-    background-color: #333;
-    color: white;
+    font-size: 0.8em;
+    font-style: italic;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #90C7E3;
+}
+img {
+    float: right;
+    margin-left: 20px;
+    border: 1px solid #000000;
 }
