@@ -1,0 +1,445 @@
+"use client"
+
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+
+export default function Contact() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <header className="bg-[#5e8c6a] text-white py-6 border-b-4 border-[#3D5A44]">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-4 md:mb-0">
+              <h1 className="text-3xl font-bold">
+                <span className="text-[#3D5A44] font-bold">Pickleball</span> Info
+              </h1>
+            </div>
+            <nav>
+              <ul className="flex flex-wrap justify-center gap-4 md:gap-6">
+                <li>
+                  <Link href="/" className="uppercase hover:text-[#3D5A44]">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="uppercase hover:text-[#3D5A44]">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rules" className="uppercase hover:text-[#3D5A44]">
+                    Rules
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/equipment" className="uppercase hover:text-[#3D5A44]">
+                    Equipment
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tips" className="uppercase hover:text-[#3D5A44]">
+                    Tips
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courts" className="uppercase hover:text-[#3D5A44]">
+                    Courts
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/gallery" className="uppercase hover:text-[#3D5A44]">
+                    Gallery
+                  </Link>
+                </li>
+                <li className="font-bold">
+                  <Link href="/contact" className="uppercase hover:text-[#3D5A44]">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col md:flex-row gap-8">
+          <main className="w-full md:w-2/3">
+            <h1 className="text-3xl font-bold mb-6">Contact & Get Involved</h1>
+
+            <div className="mb-8">
+              <Image
+                src="/images/pickleball-community.jpg"
+                alt="Group of pickleball players after a community event"
+                width={800}
+                height={450}
+                className="rounded-lg mb-4 w-full"
+              />
+            </div>
+
+            <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
+            <p className="mb-6">
+              Have questions about pickleball? Want to join a local club or participate in tournaments? Fill out the
+              form below and we'll get back to you as soon as possible.
+            </p>
+
+            <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+              <h3 className="text-xl font-bold mb-4">Contact Form</h3>
+              <ContactForm />
+            </div>
+
+            <h2 className="text-2xl font-bold mb-4">Join the Community</h2>
+            <p className="mb-4">
+              Pickleball is more than just a sport—it's a community of passionate players of all ages and skill levels.
+              Here are some ways to get involved:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-3">Local Clubs</h3>
+                <p className="mb-3">
+                  Joining a local pickleball club is a great way to meet other players, improve your skills, and
+                  participate in organized play.
+                </p>
+                <p className="mb-3">Benefits of club membership often include:</p>
+                <ul className="list-disc pl-6 mb-3 space-y-1">
+                  <li>Regular play times</li>
+                  <li>Skills clinics and lessons</li>
+                  <li>Tournaments and ladder play</li>
+                  <li>Social events</li>
+                </ul>
+                <p>
+                  <a
+                    href="https://usapickleball.org/get-involved/find-a-club/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#3D5A44] font-bold hover:underline"
+                  >
+                    Find a club near you
+                  </a>
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-3">Tournaments</h3>
+                <p className="mb-3">
+                  Tournaments are available for all skill levels, from beginners to advanced players. They're a fun way
+                  to test your skills and meet other players.
+                </p>
+                <p className="mb-3">Tournament formats include:</p>
+                <ul className="list-disc pl-6 mb-3 space-y-1">
+                  <li>Round robin</li>
+                  <li>Double elimination</li>
+                  <li>Age-based divisions</li>
+                  <li>Skill-level divisions</li>
+                </ul>
+                <p>
+                  <a
+                    href="https://www.pickleballtournaments.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#3D5A44] font-bold hover:underline"
+                  >
+                    Find upcoming tournaments
+                  </a>
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-3">Become an Ambassador</h3>
+                <p className="mb-3">
+                  USA Pickleball Ambassadors promote the sport in their local communities. Ambassadors help introduce
+                  new players to the game and support local pickleball growth.
+                </p>
+                <p>
+                  <a
+                    href="https://usapickleball.org/get-involved/ambassadors/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#3D5A44] font-bold hover:underline"
+                  >
+                    Learn about becoming an ambassador
+                  </a>
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-3">Volunteer Opportunities</h3>
+                <p className="mb-3">Pickleball events and organizations often need volunteers to help with:</p>
+                <ul className="list-disc pl-6 mb-3 space-y-1">
+                  <li>Tournament operations</li>
+                  <li>Community demonstrations</li>
+                  <li>Club administration</li>
+                  <li>Teaching beginners</li>
+                </ul>
+                <p>Contact your local club or reach out to us to learn about volunteer opportunities in your area.</p>
+              </div>
+            </div>
+          </main>
+
+          <aside className="w-full md:w-1/3">
+            <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+              <h3 className="text-xl font-bold mb-4">Get Involved</h3>
+              <p className="mb-4">
+                Pickleball is one of the fastest-growing sports in America. Join the community and discover why so many
+                people are falling in love with this fun, social, and accessible sport.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+              <h3 className="text-xl font-bold mb-4">Contact Information</h3>
+              <p className="mb-2">
+                <strong>Email:</strong> info@pickleballinfo.com
+              </p>
+              <p className="mb-2">
+                <strong>Phone:</strong> (555) 123-4567
+              </p>
+              <p className="mb-4">
+                <strong>Address:</strong> 123 Pickleball Way, Paddle City, PC 12345
+              </p>
+              <p className="mb-2">
+                <strong>Hours:</strong>
+              </p>
+              <ul className="list-disc pl-5 space-y-1 mb-4">
+                <li>Monday - Friday: 9am - 5pm</li>
+                <li>Saturday: 10am - 2pm</li>
+                <li>Sunday: Closed</li>
+              </ul>
+              <p>Follow us on social media:</p>
+              <div className="flex gap-4 mt-2">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#3D5A44] hover:underline"
+                >
+                  Facebook
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#3D5A44] hover:underline"
+                >
+                  Twitter
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#3D5A44] hover:underline"
+                >
+                  Instagram
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-4">Newsletter Signup</h3>
+              <p className="mb-4">
+                Stay updated with the latest pickleball news, tips, and events by subscribing to our newsletter.
+              </p>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="newsletter-email" className="block mb-2 font-medium">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="newsletter-email"
+                    className="w-full px-4 py-2 border border-gray-300 rounded"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    className="bg-[#3D5A44] hover:bg-[#2d4333] text-white font-bold py-2 px-6 rounded transition duration-300"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <footer className="bg-[#5e8c6a] text-white py-6 text-center mt-8">
+        <div className="container mx-auto px-4">
+          <p className="mb-2">Pickleball Info, Copyright &copy; {new Date().getFullYear()}</p>
+          <div className="flex justify-center gap-4 mt-4">
+            <a href="https://usapickleball.org" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              USA Pickleball
+            </a>
+            <span>|</span>
+            <a
+              href="https://pickleballcentral.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Pickleball Central
+            </a>
+            <span>|</span>
+            <a
+              href="https://www.pickleballportal.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Pickleball Portal
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  })
+
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // In a real application, this would send the form data to a server
+    console.log("Form submitted:", formData)
+    setSubmitted(true)
+  }
+
+  if (submitted) {
+    return (
+      <div className="text-center py-8">
+        <h3 className="text-xl font-bold mb-4 text-[#3D5A44]">Thank You!</h3>
+        <p className="mb-4">Your message has been received. We'll get back to you as soon as possible.</p>
+        <button
+          onClick={() => {
+            setFormData({
+              name: "",
+              email: "",
+              phone: "",
+              subject: "",
+              message: "",
+            })
+            setSubmitted(false)
+          }}
+          className="bg-[#3D5A44] hover:bg-[#2d4333] text-white font-bold py-2 px-6 rounded transition duration-300"
+        >
+          Send Another Message
+        </button>
+      </div>
+    )
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="name" className="block mb-2 font-medium">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block mb-2 font-medium">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded"
+            required
+          />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="phone" className="block mb-2 font-medium">
+            Phone (optional)
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded"
+          />
+        </div>
+        <div>
+          <label htmlFor="subject" className="block mb-2 font-medium">
+            Subject
+          </label>
+          <select
+            id="subject"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded"
+            required
+          >
+            <option value="">Select a subject</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Lessons">Lessons</option>
+            <option value="Tournaments">Tournaments</option>
+            <option value="Club Information">Club Information</option>
+            <option value="Volunteer">Volunteer Opportunities</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label htmlFor="message" className="block mb-2 font-medium">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows={6}
+          className="w-full px-4 py-2 border border-gray-300 rounded"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <button
+          type="submit"
+          className="bg-[#3D5A44] hover:bg-[#2d4333] text-white font-bold py-2 px-6 rounded transition duration-300"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  )
+}
+
